@@ -49,7 +49,7 @@ else:
 
     # ====== Bảng tham chiếu hoạt động -> lít nước ======
     WATER_USAGE = {
-        "Tắm vòi sen (5 phút)": 50,
+        "Tắm vòi sen": 50,
         "Tắm bồn": 150,
         "Giặt tay (1 lần)": 30,
         "Giặt máy (1 lần)": 90,
@@ -172,7 +172,7 @@ else:
 
     # ===================== TAB 4: Cài đặt =====================
     with tab4:
-        st.header("⚙️ Cài đặt tài khoản")
+        st.header("⚙️ điều chỉnh ngưỡng cảnh báo")
         current_user = st.session_state["current_user"]
 
         threshold = st.number_input(
@@ -185,3 +185,4 @@ else:
         if st.button("Lưu cài đặt"):
             st.session_state["warning_threshold"][current_user] = threshold
             st.success("✅ Đã lưu ngưỡng cảnh báo mới")
+
